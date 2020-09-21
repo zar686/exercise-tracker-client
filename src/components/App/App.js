@@ -1,13 +1,13 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
-import Header from '../Header/Header'
 import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import Navbar from '../navbar.component'
 
 class App extends Component {
   constructor () {
@@ -32,7 +32,7 @@ class App extends Component {
 
     return (
       <Fragment>
-        <Header user={user} />
+        <Navbar user={user} />
         {msgAlerts.map((msgAlert, index) => (
           <AutoDismissAlert
             key={index}
