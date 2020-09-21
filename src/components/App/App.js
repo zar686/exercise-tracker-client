@@ -1,13 +1,20 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
+import Header from '../Header/Header'
 import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
-import Navbar from '../navbar.component'
+// import Home from '../Home/Home'
+import Users from '../Users/Users'
+import User from '../Users/User'
+import UpdateProfile from '../Update/UpdateProfile'
+
+import Posts from '../Posts/Posts'
+import PostCreate from '../PostCreate/PostCreate'
 
 class App extends Component {
   constructor () {
@@ -15,8 +22,15 @@ class App extends Component {
 
     this.state = {
       user: null,
-      msgAlerts: []
+      msgAlerts: [],
+      posts: []
     }
+  }
+
+  setPosts = posts => {
+    this.setState({
+      posts: posts
+    })
   }
 
   setUser = user => this.setState({ user })
@@ -28,11 +42,11 @@ class App extends Component {
   }
 
   render () {
-    const { msgAlerts, user } = this.state
+    const { msgAlerts, user, posts } = this.state
 
     return (
-      <Fragment>
-        <Navbar user={user} />
+      <React.Fragment>
+        <Header className='navbar' user={user} />
         {msgAlerts.map((msgAlert, index) => (
           <AutoDismissAlert
             key={index}
@@ -42,6 +56,21 @@ class App extends Component {
           />
         ))}
         <main className="container">
+          <Route exact path='/' render={() => (
+            <React.Fragment>
+              <p style={{ textAlign: 'center', marginTop: '50px' }}>Welcome to <span style={{ color: '#FDB927' }}>DevSpot</span>, the social network for software developers.</p>
+            </React.Fragment>
+          )} />
+
+          <AuthenticatedRoute path='/user-info' user={user} render={() => (
+            <UpdateProfile msgAlert={this.msgAlert} setUser={this.setUser} user={user} />
+          )} />
+
+          <AuthenticatedRoute user={user} exact path='/user/edit-profile' render= {() => (
+            <UpdateProfile
+              user={user} />
+          )}/>
+
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
@@ -54,8 +83,23 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
+          <AuthenticatedRoute user={user} exact path='/users' render={() => (
+            <Users user={user}/>
+          )} />
+          <AuthenticatedRoute user={user} exact path='/users/:id' render={() => (
+            <User user={user} />
+          )} />
+
+          <AuthenticatedRoute exact path='/posts' user={user} render={() => (
+            <React.Fragment>
+              <h3 className='mt-5' style={{ textAlign: 'center' }}>Live Feed</h3>
+              <PostCreate setPosts={this.setPosts} user={user}/>
+              <Posts posts={posts} setPosts={this.setPosts} user={user}/>
+            </React.Fragment>
+
+          )}/>
         </main>
-      </Fragment>
+      </React.Fragment>
     )
   }
 }

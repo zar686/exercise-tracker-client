@@ -12,8 +12,7 @@ curl "${API}${URL_PATH}" \
     "user": {
       "email": "'"${EMAIL}"'",
       "password": "'"${PASSWORD}"'",
-      "password_confirm": "'"${PASSWORD}"'",
-      "username": "'"${USERNAME}"'"
+      "password_confirm": "'"${PASSWORD}"'"
     }
   }'
 
