@@ -8,11 +8,6 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
-// import Home from '../Home/Home'
-import Users from '../Users/Users'
-import User from '../Users/User'
-import UpdateProfile from '../Update/UpdateProfile'
-
 import Posts from '../Posts/Posts'
 import PostCreate from '../PostCreate/PostCreate'
 
@@ -62,15 +57,6 @@ class App extends Component {
             </React.Fragment>
           )} />
 
-          <AuthenticatedRoute path='/user-info' user={user} render={() => (
-            <UpdateProfile msgAlert={this.msgAlert} setUser={this.setUser} user={user} />
-          )} />
-
-          <AuthenticatedRoute user={user} exact path='/user/edit-profile' render= {() => (
-            <UpdateProfile
-              user={user} />
-          )}/>
-
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
@@ -82,12 +68,6 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} exact path='/users' render={() => (
-            <Users user={user}/>
-          )} />
-          <AuthenticatedRoute user={user} exact path='/users/:id' render={() => (
-            <User user={user} />
           )} />
 
           <AuthenticatedRoute exact path='/posts' user={user} render={() => (
