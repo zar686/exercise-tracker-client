@@ -35,3 +35,5 @@ Future Iterations
 Some of the features of future iterations will, adding video workouts, live stream workouts, buy fitness products directly from site. A future iteration of the app would support image upload of profile pictures as well picture uploads with posts using AWS.
 
 # Wire Frame Planning
+
+https://imgur.com/gallery/QpA1LKW
