@@ -4,36 +4,37 @@ Token authentication is incorporated into the app with the help of crypto (to ge
 
 # Important Links
 
-Deployed API
-https://github.com/zar686/exercise-tracker-api
-Fit Tracker App
-https://github.com/zar686/exercise-tracker-client
+- Deployed API - https://blooming-island-23928.herokuapp.com/
+- Fit Tracker App - https://zar686.github.io/exercise-tracker-client/
+- Fit Tracker Client GitHub Repo - https://github.com/zar686/exercise-tracker-client
+- Fit Tracker API GitHub Repo - https://github.com/zar686/exercise-tracker-api
+
 
 # Planning Story
 The vision for Fit Tracker is to be the Twitter for workouts, where people can share their workouts, favorite exercises, victories, struggles, things in fitness that interest them.
 
 # User Stories
 
-As an unregistered user, I would like to sign up with email and password.
-As a registered user, I would like to sign in with email and password.
-As a signed in user, I would like to change password.
-As a signed in user, I would like to sign out.
-As a signed in user, I would like to add a post to my wall.
-As a signed in user, I would like to update a post on my wall.
-As a signed in user, I would like to delete a post on my wall.
-As a signed in user, I would like to see all my posts.
-As a signed in user, I would like to view a list of other users and view their walls.
+- As an unregistered user, I would like to sign up with email and password.
+- As a registered user, I would like to sign in with email and password.
+- As a signed in user, I would like to change password.
+- As a signed in user, I would like to sign out.
+- As a signed in user, I would like to add a post to my wall.
+- As a signed in user, I would like to update a post on my wall.
+- As a signed in user, I would like to delete a post on my wall.
+- As a signed in user, I would like to see all my posts.
+- As a signed in user, I would like to view a list of other users and view their walls.
 
 # Technologies Used
-React
-React-Bootstrap
-React-Router-Dom
-Babel
-HTML
-CSS
-JavaScript
-Future Iterations
-Some of the features of future iterations will, adding video workouts, live stream workouts, buy fitness products directly from site. A future iteration of the app would support image upload of profile pictures as well picture uploads with posts using AWS.
+- React
+- React-Bootstrap
+- React-Router-Dom
+- Babel
+- HTML
+- CSS
+- JavaScript
+- Future Iterations
+- Some of the features of future iterations will, adding video workouts, live stream workouts, buy fitness products directly from site. A future iteration of the app would support image upload of profile pictures as well picture uploads with posts using AWS.
 
 # Wire Frame Planning
 
