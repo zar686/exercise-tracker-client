@@ -58,7 +58,7 @@ class App extends Component {
         <main className="container">
           <Route exact path='/' render={() => (
             <React.Fragment>
-              <p style={{ textAlign: 'center', marginTop: '50px' }}> <span style={{ color: '#FDB927' }}></span>YOUR BEST WORKOUT STARTS HERE</p>
+              <p style={{ textAlign: 'center', marginTop: '50px' }}> <span style={{ color: '#FDB927' }}></span>YOUR BEST WORKOUT STARTS HERE...Seriously</p>
             </React.Fragment>
           )} />
 
