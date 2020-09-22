@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { indexPosts } from '../../api/post'
-import { Container, Row, Col, Image, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 
 // import the api's url
 import apiUrl from '../../apiConfig'
@@ -85,10 +84,10 @@ class PostCreate extends Component {
       borderBottom: '3px solid rgba(255, 255, 255, 0.5)'
     }
     const tweetBoxStyling = {
-      fontSize: '20px',
-      width: '400px',
-      height: '75px',
-      backgroundColor: '#2C1553',
+      fontSize: '25px',
+      width: '500px',
+      height: '60px',
+      backgroundColor: 'black',
       border: 'none',
       outline: 'none',
       color: 'white'
@@ -97,17 +96,12 @@ class PostCreate extends Component {
     return (
       <Container style={createPostStyling} className="text pb-5 pt-3">
         <Row>
-          <Col xs={2}>
-            <Link to={`/users/${this.props.user._id}`}>
-              <Image roundedCircle src={this.props.user.proPic} width='75' alt="proPic"/>
-            </Link >
-          </Col>
           <Col>
             <form className='tweetForm' onSubmit={handleSubmit}>
               <input
                 style={tweetBoxStyling}
                 className='tweetBox'
-                placeholder="What's on your mind?"
+                placeholder="My Workout Today"
                 /* This input's value, will always be post.body */
                 value={post.body}
                 /* We need to add a name prop, so this input will be properly updated
@@ -116,7 +110,7 @@ class PostCreate extends Component {
                 /* Add a change event handler, that will updated our post's state */
                 onChange={handleChange}
               />
-              <br /><Button className="tweetButton" variant="primary" type='submit'>Tweet</Button>
+              <br /><Button className="POP" variant="primary" type='submit'>POST</Button>
               {/* Link the cancel button to the home page route */}
             </form>
           </Col>

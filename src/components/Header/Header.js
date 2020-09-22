@@ -5,8 +5,9 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link className='navbar' href='#posts' activeClassName="active">Show Workouts</Nav.Link>
+    <Nav.Link className='navbar' href='#posts' activeClassName="active">Show Posts</Nav.Link>
     <Nav.Link className='navbar' href="#users" activeClassName="active">Users</Nav.Link>
+    <Nav.Link className='navbar' href='#user-info' activeClassName="active">Edit Profile</Nav.Link>
     <Nav.Link className='navbar' href="#change-password" activeClassName="active">Change Password</Nav.Link>
     <Nav.Link className='navbar' href="#sign-out" activeClassName="active">Sign Out</Nav.Link>
   </Fragment>
@@ -19,10 +20,20 @@ const unauthenticatedOptions = (
   </Fragment>
 )
 
+// const alwaysOptions = (
+//   <Fragment>
+//     <Nav.Link className='navbar' to="/">Home</Nav.Link>
+//   </Fragment>
+// )
+
+// const headerStyling = {
+//   borderBottom: '1px solid rgba(255, 255, 255, 0.5)'
+// }
+
 const Header = ({ user }) => (
   <Navbar variant='dark' className='navbarBorder' expand="xl">
     <Navbar.Brand className='navbar navbar-title' href="#posts">
-      DevSpot
+      FIT TRACKER
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">

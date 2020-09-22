@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter, Link } from 'react-router-dom'
-import { Image, Modal, Button, Container, Row, Col, DropdownButton, Dropdown, ButtonGroup } from 'react-bootstrap'
+import { Modal, Button, Container, Row, Col, DropdownButton, Dropdown, ButtonGroup } from 'react-bootstrap'
 import { indexPosts, deletePost, editPost } from '../../api/post'
 import apiUrl from '../../apiConfig'
 import axios from 'axios'
@@ -89,9 +89,6 @@ class Posts extends Component {
           <Row>
             <Col xs={2}>
               <Link to={`/users/${post.owner._id}`}>
-                <div className='proPicContainer'>
-                  <Image className='proPic' src={post.owner.proPic} alt="proPic"/>
-                </div>
               </Link>
             </Col>
             <Col>

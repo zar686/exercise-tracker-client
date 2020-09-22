@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-const SignUpForm = ({ handleChange, cancelPath, email, password, passwordConfirmation, username, handleSubmit }) => (
+const SignUpForm = ({ handleChange, cancelPath, email, password, passwordConfirmation, firstName, lastName, username, city, state, languages, role, yearsOfExp, gitHub, linkedIn, proPic, country, handleSubmit }) => (
   <div className="row">
     <div className="col-sm-10 col-md-8 mx-auto mt-5">
       <h3 style={{ textAlign: 'center' }} className='mb-4'>Sign Up</h3>
@@ -15,6 +15,18 @@ const SignUpForm = ({ handleChange, cancelPath, email, password, passwordConfirm
             name="email"
             value={email}
             placeholder="Enter email"
+            onChange={handleChange}
+          />
+        </Form.Group>
+
+        <Form.Group controlId="firstName">
+          <Form.Label>First Name</Form.Label>
+          <Form.Control
+            required
+            name="firstName"
+            value={firstName}
+            type="text"
+            placeholder="First Name"
             onChange={handleChange}
           />
         </Form.Group>
