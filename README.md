@@ -3,10 +3,11 @@ Fit Tracker is built using React, React-Bootstrap, HTML, and CSS. There are two 
 Token authentication is incorporated into the app with the help of crypto (to generate the tokens) and Passport (authentication middleware used with Express). I wrote routes for creating, reading, updating and deleting (CRUD) Posts with Express. Additionally, there were routes for creating, signing in to, and updating User profiles.
 
 # Important Links
+
 Deployed API
-Fit Tracker API GitHub Repo
+https://github.com/zar686/exercise-tracker-api
 Fit Tracker App
-Fit Tracker Client GitHub Repo
+https://github.com/zar686/exercise-tracker-client
 
 # Planning Story
 The vision for Fit Tracker is to be the Twitter for workouts, where people can share their workouts, favorite exercises, victories, struggles, things in fitness that interest them.
