@@ -43,7 +43,7 @@ The vision for Fit Tracker is to be the Twitter for workouts, where people can s
 
 # Wire Frame Planning
 
-
+![image](https://user-images.githubusercontent.com/28852632/94067130-509c9a80-fde5-11ea-9c55-45ab51399f45.png)
 
 # Setup & Installation:
 
