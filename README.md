@@ -2,9 +2,15 @@
 Fit Tracker is built using React, React-Bootstrap, HTML, and CSS. There are two main resources in the backend that the client connects to: Users and Posts. Both of these resources are modelled using Mongoose and stored as collections of documents in a non-relational database (MongoDB). Supported user features include sign in, sign up, creating a post, seeing all posts, seeing all users, seeing other people's posts, sign out, change password and update profile (routes can be found in the API repo).
 Token authentication is incorporated into the app with the help of crypto (to generate the tokens) and Passport (authentication middleware used with Express). I wrote routes for creating, reading, updating and deleting (CRUD) Posts with Express. Additionally, there were routes for creating, signing in to, and updating User profiles.
 
+<<<<<<< HEAD
 https://imgur.com/vDgIrQ8
 
 https://imgur.com/rbKqa32
+=======
+![image](https://user-images.githubusercontent.com/28852632/94065959-b720b900-fde3-11ea-8484-4160090a24ab.png)
+
+![image](https://user-images.githubusercontent.com/28852632/94066015-cc95e300-fde3-11ea-85d1-9bcab05e8e54.png)
+>>>>>>> 2f14ab4... updates
 
 # Important Links
 
