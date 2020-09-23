@@ -2,6 +2,8 @@
 Fit Tracker is built using React, React-Bootstrap, HTML, and CSS. There are two main resources in the backend that the client connects to: Users and Posts. Both of these resources are modelled using Mongoose and stored as collections of documents in a non-relational database (MongoDB). Supported user features include sign in, sign up, creating a post, seeing all posts, seeing all users, seeing other people's posts, sign out, change password and update profile (routes can be found in the API repo).
 Token authentication is incorporated into the app with the help of crypto (to generate the tokens) and Passport (authentication middleware used with Express). I wrote routes for creating, reading, updating and deleting (CRUD) Posts with Express. Additionally, there were routes for creating, signing in to, and updating User profiles.
 
+![Screenshot](https://imgur.com/a/QrGjXMX)
+
 # Important Links
 
 - Deployed API - https://blooming-island-23928.herokuapp.com/
@@ -39,3 +41,14 @@ The vision for Fit Tracker is to be the Twitter for workouts, where people can s
 # Wire Frame Planning
 
 https://imgur.com/gallery/QpA1LKW
+
+# Setup & Installation:
+
+- Download this template.
+- Unzip and rename the template directory (unzip ~/Downloads/p4-client-master.zip).
+- Move into the new project and git init.
+- Empty README.md and fill with your own content.
+- Replace react-auth-template in package.json with your projects name.
+- Replace the "homepage" field in package.json with your (public) Github account name and repository name.
+- Install dependencies with npm install. git add and git commit your changes.
+- Run the development server with npm start.
